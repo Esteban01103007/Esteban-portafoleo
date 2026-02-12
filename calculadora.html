@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calc | Engineering & Logic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
+        .glass { background: rgba(24, 24, 27, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .btn-shine { position: relative; overflow: hidden; }
+        .btn-shine::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent); transform: rotate(45deg); transition: 0.5s; }
+        .btn-shine:hover::after { left: 120%; }
+        .video-container { position: relative; width: 100%; border-radius: 2.5rem; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1); background: #09090b; }
+        .video-container::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 100px rgba(0,0,0,0.5); pointer-events: none; }
+    </style>
+</head>
+<body class="selection:bg-amber-500/30">
+
+    <nav class="fixed w-full z-50 px-6 py-4 glass">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-xl font-black tracking-tighter uppercase italic">Esteban<span class="text-amber-500">.lab</span></a>
+            <div class="flex gap-6 items-center">
+                <a href="https://github.com/Esteban01103007/calculadora" target="_blank" class="hidden md:block text-xs uppercase tracking-widest text-gray-400 hover:text-white transition-colors">GitHub Repo</a>
+                <a href="https://esteban01103007.github.io/calculadora/" target="_blank" class="text-sm font-medium px-5 py-2 bg-amber-500 text-black rounded-full hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 btn-shine">Lanzar Aplicación</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 pt-32 pb-20">
+        <a href="index.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-amber-400 mb-10 transition-colors group">
+            <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i> Volver al portafolio
+        </a>
+
+        <header class="max-w-4xl mb-16">
+            <div class="inline-block px-3 py-1 border border-amber-500/30 rounded-md mb-6 bg-amber-500/5">
+                <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Software Engineering Case</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter">Calculadora Científica</h1>
+            <p class="text-2xl text-amber-500 font-light mb-8">Ingeniería de precisión y procesamiento algorítmico.</p>
+            <p class="text-xl text-gray-400 leading-relaxed max-w-2xl">Desarrollo de una herramienta computacional de alto rendimiento, optimizada para la resolución de operaciones complejas con una arquitectura de código limpia y escalable.</p>
+            
+            <div class="mt-10">
+                <a href="https://esteban01103007.github.io/calculadora/" target="_blank" class="inline-flex items-center gap-4 p-4 rounded-2xl bg-zinc-900/50 border border-white/5 hover:border-amber-500/50 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-black shadow-lg shadow-amber-500/20">
+                        <i data-lucide="play" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase font-bold tracking-tighter">Live Demo</p>
+                        <p class="text-white font-medium italic">esteban01103007.github.io/calculadora/</p>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-5 h-5 ml-4 text-gray-700 group-hover:text-amber-500 transition-colors"></i>
+                </a>
+            </div>
+        </header>
+
+        <section class="mb-24">
+            <div class="video-container group">
+                <div class="absolute top-4 left-6 z-10 flex items-center gap-2">
+                    <div class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></div>
+                    <span class="text-[10px] uppercase tracking-widest font-bold text-white/40">Sytem Preview // Recording</span>
+                </div>
+                <video 
+                    class="w-full h-full object-cover aspect-video opacity-80 group-hover:opacity-100 transition-opacity duration-700"
+                    autoplay 
+                    muted 
+                    loop 
+                    playsinline
+                >
+                    <source src="assets/calculadora-demo.mp4" type="video/mp4">
+                    Tu navegador no soporta videos.
+                </video>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-12 gap-16">
+            <div class="md:col-span-7 space-y-16">
+                <section>
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3"><i data-lucide="binary" class="text-amber-500"></i> Lógica de Procesamiento</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">El núcleo utiliza un analizador de expresiones personalizado para gestionar la jerarquía matemática avanzada, asegurando resultados exactos en funciones trigonométricas y logarítmicas complejas.</p>
+                </section>
+                <section>
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3"><i data-lucide="layout" class="text-amber-500"></i> Interfaz Adaptativa</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">Construida con un enfoque Mobile-First, la interfaz se adapta dinámicamente ofreciendo controles táctiles precisos y una respuesta visual inmediata para mejorar la experiencia del usuario.</p>
+                </section>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="sticky top-32 p-8 bg-zinc-900/50 rounded-3xl border border-white/10 shadow-2xl shadow-amber-500/5">
+                    <h3 class="text-xl font-bold mb-6 text-amber-500">Tech Stack</h3>
+                    <div class="bg-black p-5 rounded-2xl border border-white/5 mb-8 overflow-x-auto">
+                        <pre class="text-[10px] text-amber-400 font-mono leading-tight">
+{
+  "engine": "Vanilla JS / Math Engine",
+  "styling": "Tailwind CSS Framework",
+  "architecture": {
+    "pattern": "Modular Design",
+    "precision": "IEEE 754 Standard",
+    "deployment": "GitHub Pages"
+  }
+}
+                        </pre>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-amber-500/10 rounded-full text-xs text-amber-500 border border-amber-500/20 font-bold uppercase">Open Source</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/10">UI/UX</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/10">ES6 Logic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-zinc-600 text-xs tracking-widest uppercase">Esteban // Engineering Solutions // 2026</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

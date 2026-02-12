@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Management | Web System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; }
+        .glass { background: rgba(24, 24, 27, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .btn-shine { position: relative; overflow: hidden; }
+        .btn-shine::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent); transform: rotate(45deg); transition: 0.5s; }
+        .btn-shine:hover::after { left: 120%; }
+        .stock-glow { filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.3)); }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+    <main class="container mx-auto px-6 pt-32 pb-20">
+        <a href="index.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-blue-400 mb-10 transition-colors group">
+            <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-1 transition-transform"></i> Mis Proyectos
+        </a>
+
+        <header class="max-w-4xl mb-20">
+            <div class="inline-block px-3 py-1 border border-blue-500/30 rounded-md mb-6 bg-blue-500/5">
+                <span class="text-blue-500 text-xs font-bold uppercase tracking-widest italic">Full Stack Project</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase">Web Warehouse</h1>
+            <p class="text-2xl text-blue-400 font-light mb-8 italic">Gestión inteligente de inventarios y control de stock.</p>
+            <p class="text-xl text-gray-400 leading-relaxed max-w-2xl">Plataforma integral diseñada para centralizar el flujo de mercancías, optimizar el control de entradas/salidas y ofrecer analíticas precisas sobre el estado de un almacén en tiempo real.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+            <div class="rounded-[2.5rem] overflow-hidden border border-white/10 bg-zinc-900/30 flex items-center justify-center p-4 h-[400px] group transition-all hover:border-blue-500/30">
+                <img src="assets/page1.png" class="max-w-full max-h-full object-contain stock-glow group-hover:scale-105 transition-transform duration-700" alt="Dashboard del Almacén">
+            </div>
+
+            <div class="rounded-[2.5rem] overflow-hidden border border-white/10 bg-zinc-900/30 flex items-center justify-center p-4 h-[400px] group transition-all hover:border-blue-500/30">
+                <img src="assets/page2.png" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700" alt="Lista de Inventario">
+            </div>    
+        </div>
+
+        <div class="grid md:grid-cols-12 gap-16">
+            <div class="md:col-span-7 space-y-16">
+                <section>
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3"><i data-lucide="package" class="text-blue-500"></i> Control de Inventario</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">Sistema CRUD completo para la gestión de productos, permitiendo el seguimiento detallado de categorías, unidades en stock y alertas automáticas de reabastecimiento cuando los niveles son bajos.</p>
+                </section>
+                <section>
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3"><i data-lucide="bar-chart-3" class="text-blue-500"></i> Analítica de Datos</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">Visualización clara de movimientos de almacén mediante tablas dinámicas y reportes, facilitando la toma de decisiones basada en el flujo real de mercancía.</p>
+                </section>
+                <section>
+                    <h2 class="text-3xl font-bold mb-6 flex items-center gap-3"><i data-lucide="layers" class="text-blue-500"></i> Arquitectura Modular</h2>
+                    <p class="text-gray-400 text-lg leading-relaxed">Desarrollado con una separación clara entre el frontend y el backend, garantizando que el sistema sea fácil de escalar para manejar miles de registros sin pérdida de velocidad.</p>
+                </section>
+            </div>
+
+            <div class="md:col-span-5">
+                <div class="sticky top-32 p-8 bg-zinc-900/50 rounded-3xl border border-white/10 shadow-2xl shadow-blue-500/5">
+                    <h3 class="text-xl font-bold mb-6 text-blue-400">Especificaciones del Sistema</h3>
+                    <div class="bg-black p-5 rounded-2xl border border-white/5 mb-8 overflow-x-auto">
+                        <pre class="text-[10px] text-blue-400 font-mono leading-tight">
+{
+  "project": "Warehouse Management System",
+  "type": "Web Application",
+  "features": [
+    "Real-time Stock Tracking",
+    "Dynamic Search & Filters",
+    "Categorization Engine",
+    "Responsive Inventory Tables"
+  ],
+  "performance": "Fast data fetching & filtering"
+}
+                        </pre>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-blue-500/10 rounded-full text-xs text-blue-500 border border-blue-500/20 font-bold uppercase">Data Management</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/10 italic">Frontend Flow</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/10">CRUD Logic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-20 text-center border-t border-white/5">
+        <p class="text-zinc-600 text-xs tracking-widest uppercase">Esteban // Software Developer // 2026</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
